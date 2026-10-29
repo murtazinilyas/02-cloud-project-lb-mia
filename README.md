@@ -165,4 +165,4 @@ resource "yandex_lb_network_load_balancer" "clopro_nlb" {
 
 ![2](https://github.com/murtazinilyas/02-cloud-project-lb-mia/blob/main/screenshots/2.png)
 
-Эх, суровые реалии поиска работы без опыта в наше время... (;_;)
+Эх, суровые реалии поиска работы без опыта в наше время... ( ; _ ; )
