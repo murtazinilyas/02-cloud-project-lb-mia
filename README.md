@@ -159,10 +159,10 @@ resource "yandex_lb_network_load_balancer" "clopro_nlb" {
 
 Балансировщик поднялся, машины в инстанс группе прошли хелсчек:
 
-![1](https://github.com/murtazinilyas/02-cloud-project-lb-mia/blob/screenshots/1.png)
+![1](https://github.com/murtazinilyas/02-cloud-project-lb-mia/blob/main/screenshots/1.png)
 
 Посмотрим как выглядит страница:
 
-![2](https://github.com/murtazinilyas/02-cloud-project-lb-mia/blob/screenshots/2.png)
+![2](https://github.com/murtazinilyas/02-cloud-project-lb-mia/blob/main/screenshots/2.png)
 
 Эх, суровые реалии поиска работы без опыта в наше время... (;_;)
