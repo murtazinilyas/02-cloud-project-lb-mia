@@ -34,7 +34,7 @@
 
 ## Решение 1.
 
-Манифест `network.tf` оставил без изменений, переписал `main.tf`, написал `lb.tf`.
+Манифест `network.tf` оставил без изменений, переписал `main.tf` и `cloud-init.yml`, написал `lb.tf`.
 
 <details>  
 <summary> main.tf </summary>
@@ -151,6 +151,49 @@ resource "yandex_lb_network_load_balancer" "clopro_nlb" {
   }
 }
 ```
+</details>
+
+<details>  
+<summary> cloud-init.yml </summary>
+
+```yaml
+#cloud-config
+users:
+  - name: ${username}
+    groups: sudo
+    shell: /bin/bash
+    sudo: ["ALL=(ALL) NOPASSWD:ALL"]
+    ssh_authorized_keys:
+      - ${ssh_public_key}
+timezone: Europe/Moscow
+package_update: true
+packages:
+  - apache2
+write_files:
+  - path: /var/www/html/index.html
+    owner: www-data:www-data
+    permissions: '0644'
+    content: |
+      <!DOCTYPE html>
+      <html>
+      <head>
+          <meta charset="UTF-8">
+          <title>Домашнее задание к занятию «Вычислительные мощности. Балансировщики нагрузки»</title>
+      </head>
+      <body>
+          <h1>Суровые будни джуна девопса</h1>
+          
+          <img src="${image_url}" alt="Картинка из Object Storage" style="max-width: 100%;">
+          
+          <hr>
+      </body>
+      </html>
+runcmd:
+  - systemctl enable apache2
+  - systemctl start apache2
+  - systemctl restart apache2
+```
+
 </details>
 
 Закинул картинку в бакет и открыл к ней доступ всем на время.
