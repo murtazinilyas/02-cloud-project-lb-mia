@@ -209,3 +209,19 @@ runcmd:
 ![2](https://github.com/murtazinilyas/02-cloud-project-lb-mia/blob/main/screenshots/2.png)
 
 Эх, суровые реалии поиска работы без опыта в наше время... ( ; _ ; )
+
+### UPD
+
+Совсем забыл про условие остановить одну или несколько машин в инстанс группе.
+
+Пересоздал ресурсы, дождался HELATHY статуса на всех машинах, остановил одну из машин и проверил работу:
+
+![3](https://github.com/murtazinilyas/02-cloud-project-lb-mia/blob/main/screenshots/3.png)
+
+![4](https://github.com/murtazinilyas/02-cloud-project-lb-mia/blob/main/screenshots/4.png)
+
+Потом остановил еще одну машину и проверил работу:
+
+![5](https://github.com/murtazinilyas/02-cloud-project-lb-mia/blob/main/screenshots/5.png)
+
+![6](https://github.com/murtazinilyas/02-cloud-project-lb-mia/blob/main/screenshots/6.png)
